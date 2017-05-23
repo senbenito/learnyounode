@@ -24,6 +24,9 @@
 //FILTERED LS
 // var fs = require('fs');
 // var result = fs.readdir(process.argv[2], function callback(err, list){
+//   if (err)
+//   return callback(err);
+//   callback(null, list);
 //   for (let i=0; i<list.length; i++){
 //     if (list[i].includes(`.${process.argv[3]}`))
 //     console.log(list[i]);
@@ -31,4 +34,4 @@
 // });
 
 //MAKE IT MODULAR
-var mymodule = require('./mymodule.js')  
+// var mymodule = require('./mymodule.js')
