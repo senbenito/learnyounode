@@ -23,15 +23,17 @@
 
 //FILTERED LS
 // var fs = require('fs');
-// var result = fs.readdir(process.argv[2], function callback(err, list){
-//   if (err)
-//   return callback(err);
-//   callback(null, list);
+// var path = require('path');
+// fs.readdir(process.argv[2], function callback(err, list){
+//     if (err) return console.error(err)
 //   for (let i=0; i<list.length; i++){
 //     if (list[i].includes(`.${process.argv[3]}`))
 //     console.log(list[i]);
 //   }
 // });
 
+
 //MAKE IT MODULAR
 // var mymodule = require('./mymodule.js')
+// mymodule(dir, ext, callback);
+// console.log('hello');
