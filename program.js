@@ -1,3 +1,7 @@
+
+const fs = require('fs');
+const path = require('path');
+
 //HELLO WORLD
 // console.log('HELLO WORLD');
 
@@ -32,8 +36,18 @@
 //   }
 // });
 
-
 //MAKE IT MODULAR
-// var mymodule = require('./mymodule.js')
+// const mymodule = require('./mymodule.js');
+// var dir = process.argv[2];
+// var ext = process.argv[3];
+// var callback = function (err, list){
+//   if (err) {
+//     return console.log(err);
+//   }
+//   for (let i=0; i<list.length; i++){
+//     console.log(list[i]);
+//   }
+// };
 // mymodule(dir, ext, callback);
-// console.log('hello');
+
+//HTTP CLIENT

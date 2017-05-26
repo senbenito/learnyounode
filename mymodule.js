@@ -1,15 +1,18 @@
-var fs = require('fs');
-// var path = require('path');
-var dir = process.argv[2];
-var ext = process.argv[3];
-var callback = process.argv[4];
+const fs = require('fs');
+const path = require('path');
+
 
 module.exports = function module(dir, ext, callback){
-  fs.readdir(process.argv[2], function callback(err, list){
-      if (err) return console.error(err)
+  fs.readdir(dir, function (err, list){
+      if (err) {
+        return callback(err)
+      }
+    var results = [];
     for (let i=0; i<list.length; i++){
-      if (list[i].includes(`.${process.argv[3]}`))
-      console.log(list[i]);
+      if (path.extname(list[i]) === `.${ext}`){
+        results.push(list[i]);
+      }
     }
+    return callback(null, results);
   });
 }
